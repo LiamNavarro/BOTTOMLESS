@@ -1,0 +1,216 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0a0a0a;
+            color: #a0a0a0;
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.6;
+            min-height: 100vh;
+            user-select: none;
+            /* No necesitamos display: flex ni overflow-x: hidden aquí porque nav y aside son fixed */
+        }
+
+        /* MENÚ LATERAL IZQUIERDO */
+        nav {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 220px;
+            background-color: #1a1a1a;
+            box-shadow: 2px 0 10px rgba(50, 50, 50, 0.7);
+            padding-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            z-index: 10;
+        }
+
+        nav h2 {
+            color: #666666;
+            font-weight: normal;
+            font-size: 1.3rem;
+            text-align: center;
+            margin-bottom: 25px;
+            letter-spacing: 1.5px;
+            border-bottom: 1px solid #333333;
+            padding-bottom: 10px;
+        }
+
+        nav button {
+            background: transparent;
+            border: none;
+            color: #777777;
+            padding: 12px 25px;
+            font-size: 1rem;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+            user-select: none;
+        }
+        nav button:hover,
+        nav button.active {
+            color: #bbbaba;
+            background-color: #333333;
+            box-shadow: inset 4px 0 0 0 #555555;
+            transform: scale(1.03);
+        }
+        
+        aside {
+            position: fixed;
+            right: 0;
+            top: 0;
+            height: 100vh;
+            width: 250px;
+            background-color: #1a1a1a;
+            box-shadow: -2px 0 10px rgba(50, 50, 50, 0.7);
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #888888;
+            font-size: 0.95rem;
+            user-select: text;
+            z-index: 10;
+        }
+
+        aside h3 {
+            margin-bottom: 15px;
+            color: #666666;
+            border-bottom: 1px solid #333333;
+            width: 100%;
+            padding-bottom: 10px;
+            text-align: center;
+            letter-spacing: 1.2px;
+        }
+
+        aside img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 0 15px rgba(100, 100, 100, 0.4);
+        }
+
+        aside p {
+            margin-bottom: 20px;
+            text-align: center;
+            line-height: 1.4;
+            color: #999999;
+        }
+
+        aside a {
+            color: #777777;
+            text-decoration: none;
+            margin: 5px 0;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+        aside a:hover {
+            color: #bbbaba;
+            text-decoration: underline;
+        }
+
+        /* CONTENEDOR PRINCIPAL */
+        main {
+            /* Empuja el main para que empiece después del nav fijo */
+            margin-left: 220px; /* Ancho de la barra de navegación izquierda */
+            /* Calcula el ancho completo disponible entre nav y aside */
+            width: calc(100% - 220px - 250px); /* 100% del viewport - ancho nav - ancho aside */
+            
+            background: #1a1a1a;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(100, 100, 100, 0.3);
+            min-height: 100vh;
+            overflow-y: auto;
+            /* Eliminamos max-width de aquí para que el main se extienda completamente */
+        }
+
+        /* Contenedor para el contenido dentro de 'main' para controlar su ancho máximo */
+        .main-content-wrapper {
+            max-width: 850px; /* Ancho máximo para el texto */
+            margin: 0 auto; /* Centra el contenido dentro del main */
+            padding: 40px 30px; /* Padding interno para el texto */
+        }
+
+        /* TÍTULO Y TEXTO */
+        h1.glitch {
+            font-size: 3rem;
+            color: #4a4a4a;
+            text-shadow: 0 0 6px #2a2a2a;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            animation: flicker 3.5s infinite;
+        }
+        @keyframes flicker {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+                opacity: 1;
+            }
+            20%, 22%, 24%, 55% {
+                opacity: 0.3;
+            }
+        }
+
+        h2 {
+            color: #666666;
+            margin-bottom: 18px;
+            border-bottom: 1px solid #333333;
+            padding-bottom: 6px;
+            font-weight: normal;
+        }
+
+        p {
+            margin-bottom: 22px;
+            font-size: 1.1rem;
+            letter-spacing: 0.05em;
+            color: #888888;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #555555;
+            text-align: center;
+            letter-spacing: 1px;
+            padding-bottom: 30px;
+
+            /* Aseguramos que el footer también respete las barras laterales */
+            margin-left: 220px; /* Mismo margen que el main */
+            width: calc(100% - 220px - 250px); /* Mismo ancho que el main */
+            
+            /* Contenedor interno para centrar el texto del footer y darle padding */
+            max-width: 850px; /* Mismo max-width que el contenido del main si lo deseas centrado */
+            margin-right: auto; /* Para centrar el footer dentro del espacio disponible */
+            margin-left: 220px; /* Asegura que el footer empiece después del nav */
+            padding: 30px 20px; /* Padding para el contenido del footer */
+            box-sizing: border-box; /* Asegura que padding no aumente el ancho total */
+        }
+        /* Ajuste para el footer para que se adapte al ancho y se posicione correctamente */
+        body > footer { /* Selecciona directamente el footer que es hijo directo de body */
+            margin-left: 220px;
+            width: calc(100% - 220px - 250px);
+            padding: 30px 20px;
+            box-sizing: border-box;
+            /* Si quieres centrar el texto en el footer, margin: 0 auto; en un div interno es mejor */
+            text-align: center;
+        }
+        /* Cambiar el ancho del aside para que sea más ancho */
+aside {
+  width: 320px; /* antes 250px, ahora un poco más ancho */
+  padding: 30px 25px; /* un poco más padding para que no quede tan pegado */
+  overflow-y: auto; /* para scroll si el contenido es muy largo */
+}
+
+/* Ajustar margen derecho del main para que no quede tapado por aside */
+main {
+  margin-left: 220px;
+  margin-right: 320px; /* mismo ancho que aside */
+  /* resto igual */
+}

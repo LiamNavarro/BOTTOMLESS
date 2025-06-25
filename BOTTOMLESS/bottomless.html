@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BOTTOMLESS - Menú Lateral + Info Creador</title>
+    <link rel="stylesheet" href="bottomless.css">
+</head>
+<body>
+
+    <nav>
+        <h2>Menú</h2>
+        <button class="active" data-section="intro">Introducción</button>
+        <button data-section="historia">Historia</button>
+        <button data-section="personajes">Personajes</button>
+        <button data-section="batallas">Batallas</button>
+        <button data-section="finales">Finales</button>
+    </nav>
+
+    <main id="content">
+        <div class="main-content-wrapper">
+            <h1 class="glitch">BOTTOMLESS</h1>
+            <h2>Una experiencia muy personal</h2>
+        <p>
+          No estás aquí por casualidad. Este no es un juego cualquiera ni una historia para distraerte por un rato. Este es un llamado directo a lo más profundo de ti mismo, una invitación para enfrentar aquello que a menudo evitas, aquello que quizás ni siquiera sabes que llevas dentro.  
+        </p>
+        <p>
+          Aquí no eres solo un jugador: eres un alma que se adentra en un laberinto oscuro, en un espacio donde la ansiedad, la tristeza y la soledad no son monstruos externos, sino compañeros que te siguen en silencio.  
+          Cada paso que des en este viaje será un reflejo de tus propias batallas internas, esas que libras en silencio, lejos de las miradas y las palabras.  
+          Sentirás cómo tu pecho se tensa, cómo la incertidumbre te susurra al oído, y cómo la oscuridad a veces parece envolverlo todo, amenazando con absorber la luz que todavía queda en ti.  
+        </p>
+        <p>
+          Pero este viaje no es solo una batalla contra la oscuridad: es también una búsqueda de significado, un camino para encontrar respuestas en medio del caos.  
+          Aquí descubrirás que no estás solo, que esos demonios internos que creías invencibles tienen nombres, formas y, sobre todo, razones para existir.  
+          Y aunque parezca imposible, encontrarás momentos fugaces de calma, chispas de esperanza que te recordarán que la luz siempre está al alcance, incluso en la noche más profunda.  
+        </p>
+        <p>
+          Este descenso no es una sentencia, sino una oportunidad para comprenderte a ti mismo con toda la complejidad que eso implica.  
+          No te prometemos un final feliz ni un camino fácil, porque la vida real tampoco los ofrece. Pero sí te garantizamos que este viaje te cambiará.  
+          Cada batalla, cada decisión, cada paso será un reflejo de tus propias emociones y te ayudará a descubrir fuerzas que quizás ni sabías que tenías.  
+        </p>
+        <p>
+          Prepárate para mirar cara a cara aquello que temes, para sentir con intensidad y para comprender que la lucha interna no te define, pero sí puede enseñarte a ser más fuerte y más verdadero.  
+          Aquí, en este mundo oscuro y luminoso a la vez, eres más que un jugador: eres un viajero valiente, un alma en búsqueda, alguien que decide enfrentarse a la tormenta para encontrar su propia paz.  
+          Bienvenido. Este viaje es para ti.
+        </p>
+        </div>
+    </main>
+
+<aside>
+  <h3>Sobre el creador</h3>
+  <img src="https://cdn.discordapp.com/attachments/841261388773064724/1387344480927088752/image.png?ex=685d00bb&is=685baf3b&hm=2e6c2f101866229aaa48ab47651f1d67b6b35a717c0acc24232ace416dc0b33b&" alt="Foto del creador" />
+  <p>
+    Soy un joven apasionado por el desarrollo, ya sea creando páginas web, aplicaciones o videojuegos.
+  </p>
+  <p>
+     Me encanta el desafío que supone construir algo desde cero y ver cómo cobra vida en la pantalla, cómo interactúa la gente con ello y cómo puede llegar a cambiar o acompañar sus vidas. Pero más allá del código y las pantallas, hay otra faceta de mí que me motiva igual o más: la fascinación por el cerebro humano y sus complejidades.
+  </p>
+  <p>
+    Me gusta explorar los laberintos de la mente, intentar comprender por qué cada persona carga con sus propios demonios internos, esos problemas que a veces parecen únicos pero que en el fondo todos compartimos. Me interesa entender cómo se forman esas heridas invisibles, cómo afectan a cada individuo de manera distinta, y qué caminos pueden tomarse para sanar o convivir con ellas.
+  </p>
+  <p>
+    Para mí, el desarrollo de software y la exploración de la mente no son mundos separados, sino dos caras de la misma moneda: ambos requieren paciencia, curiosidad y creatividad para resolver problemas, para entender el por qué y el cómo, ya sea de una función mal optimizada o de un sentimiento que no logra salir a la luz.
+  </p>
+  <a href="https://x.com/elcaraMoai" target="_blank" rel="noopener noreferrer">Twitter</a>
+  <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+  <a href="tomailto:liamnav123@gmail.com">Contacto</a>
+</aside>
+
+    <script>
+
+      const content = document.getElementById('content');
+        const buttons = document.querySelectorAll('nav button');
+
+        const sections = {
+            intro: `
+                <div class="main-content-wrapper">
+                    <h1 class="glitch">Descenso a la Oscuridad</h1>
+                    <h2>Bienvenido a la experiencia</h2>
+        <p>
+          No estás aquí por casualidad. Este no es un juego cualquiera ni una historia para distraerte por un rato. Este es un llamado directo a lo más profundo de ti mismo, una invitación para enfrentar aquello que a menudo evitas, aquello que quizás ni siquiera sabes que llevas dentro.  
+        </p>
+        <p>
+          Aquí no eres solo un jugador: eres un alma que se adentra en un laberinto oscuro, en un espacio donde la ansiedad, la tristeza y la soledad no son monstruos externos, sino compañeros que te siguen en silencio.  
+          Cada paso que des en este viaje será un reflejo de tus propias batallas internas, esas que libras en silencio, lejos de las miradas y las palabras.  
+          Sentirás cómo tu pecho se tensa, cómo la incertidumbre te susurra al oído, y cómo la oscuridad a veces parece envolverlo todo, amenazando con absorber la luz que todavía queda en ti.  
+        </p>
+        <p>
+          Pero este viaje no es solo una batalla contra la oscuridad: es también una búsqueda de significado, un camino para encontrar respuestas en medio del caos.  
+          Aquí descubrirás que no estás solo, que esos demonios internos que creías invencibles tienen nombres, formas y, sobre todo, razones para existir.  
+          Y aunque parezca imposible, encontrarás momentos fugaces de calma, chispas de esperanza que te recordarán que la luz siempre está al alcance, incluso en la noche más profunda.  
+        </p>
+        <p>
+          Este descenso no es una sentencia, sino una oportunidad para comprenderte a ti mismo con toda la complejidad que eso implica.  
+          No te prometemos un final feliz ni un camino fácil, porque la vida real tampoco los ofrece. Pero sí te garantizamos que este viaje te cambiará.  
+          Cada batalla, cada decisión, cada paso será un reflejo de tus propias emociones y te ayudará a descubrir fuerzas que quizás ni sabías que tenías.  
+        </p>
+        <p>
+          Prepárate para mirar cara a cara aquello que temes, para sentir con intensidad y para comprender que la lucha interna no te define, pero sí puede enseñarte a ser más fuerte y más verdadero.  
+          Aquí, en este mundo oscuro y luminoso a la vez, eres más que un jugador: eres un viajero valiente, un alma en búsqueda, alguien que decide enfrentarse a la tormenta para encontrar su propia paz.  
+          Bienvenido. Este viaje es para ti.
+        </p>
+                </div>`,
+            historia: `
+                <div class="main-content-wrapper">
+                    <h1>Historia</h1>
+                    <h2>El viaje al fondo del alma</h2>
+                    <p>
+          En esta historia, no eres simplemente un observador, sino el protagonista de un viaje oscuro y personal. Caminas por un sendero sombrío donde cada paso que das es una batalla interna contra las sombras que habitan en tu mente. No es solo un relato ficticio; es un reflejo de las luchas reales que muchos enfrentan en silencio cada día.
+        </p>
+        <p>
+          La narrativa te guía a través de paisajes emocionales, desde la opresiva ansiedad que roba tu aliento, hasta la pesada carga de la depresión que nubla tu visión. A medida que avanzas, conocerás a personajes que no son solo figuras, sino manifestaciones de tus propios miedos, dudas y esperanzas. Ellos te retarán, te confrontarán y a veces, te acompañarán en la oscuridad.
+        </p>
+        <p>
+          Este viaje no es fácil ni lineal. Habrá momentos de claridad y otros de absoluta confusión. La historia está diseñada para que sientas el peso de cada decisión, el impacto de cada pensamiento, y la fuerza que requiere seguir adelante cuando todo parece perdido.
+        </p>
+        <p>
+          Al final, no hay promesas de un final feliz, sino una invitación a entender que la lucha continua es parte del proceso, y que incluso en la oscuridad más profunda, una chispa de luz puede surgir. Este relato busca empatizar, inspirar y ofrecer un espacio para que te reconozcas, que veas reflejado aquello que a menudo no se dice en voz alta.
+        </p>
+        <p>
+          Prepárate para enfrentar lo más profundo de ti mismo, porque esta no es solo una historia para ser leída: es una experiencia para ser vivida, sentida y, sobre todo, comprendida.
+        </p>
+                </div>`,
+            personajes: `
+                <div class="main-content-wrapper">
+                    <h1>Personajes</h1>
+                    <h2>Enemigos y aliados invisibles</h2>
+        <p>
+          En BOTTOMLESS, el protagonista no es un héroe tradicional ni un ente separado del jugador. Más bien, es un espejo, una representación directa de ti, del jugador, y de todos nosotros.
+        </p>
+        <p>
+          Cada personaje, cada enemigo, cada desafío que encuentras, es una manifestación simbólica de las emociones, dudas, temores y sombras que habitan en nuestro interior. No luchas contra monstruos externos, sino contra fragmentos de tu propia mente.
+        </p>
+        <p>
+          Este reflejo íntimo y profundo está diseñado para hacerte sentir que la batalla que libras no es solo virtual, sino real, personal y única. El personaje es tu reflejo más honesto, una extensión de tu alma y tus conflictos internos, que pone en evidencia que todos cargamos con nuestras propias tormentas invisibles.
+        </p>
+        <p>
+          Reconocer que el protagonista es un espejo nos invita a la empatía, la autoaceptación y la reflexión. No se trata de vencer a otros, sino de entendernos a nosotros mismos, de enfrentarnos con valentía a nuestras partes más oscuras para poder encontrar luz.
+        </p>
+                </div>`,
+            batallas: `
+                <div class="main-content-wrapper">
+                    <h1>Batallas</h1>
+                    <h2>Enfrentando la tormenta interna</h2>
+        <p>
+          En BOTTOMLESS, las batallas no son solo confrontaciones físicas, sino enfrentamientos psicológicos intensos. El combate se desarrolla por turnos, donde cada acción representa una decisión emocional, un choque interno entre nuestras defensas y las voces que nos sabotean.
+        </p>
+        <p>
+          Cada ataque que esquivas o bloqueas simboliza esos momentos en los que logras resistir la ansiedad, el miedo o la duda que intentan dominarte. No es solo habilidad o reflejos; es una lucha constante con la mente, con esos pensamientos que a veces nos quieren arrastrar hacia abajo.
+        </p>
+        <p>
+          En cada turno, se te invita a elegir no solo cómo atacar o defenderte, sino cómo enfrentarte a tus propias inseguridades y conflictos internos. Las batallas reflejan esa batalla invisible que todos libramos día a día, donde la mente puede ser tanto nuestro mayor enemigo como nuestro aliado más poderoso.
+        </p>
+        <p>
+          Más allá de ganar o perder, estas batallas son un espejo de nuestra resiliencia y vulnerabilidad, una metáfora de la lucha emocional que está en el corazón de BOTTOMLESS.
+        </p>
+                </div>`,
+            finales: `
+                <div class="main-content-wrapper">
+                    <h1>Finales</h1>
+                    <h2>Dos caminos, una oscuridad</h2>
+  <p>
+    En este juego, cada elección que haces no solo afecta el destino inmediato, sino que refleja el estado profundo de tu alma. Los finales no son simples desenlaces felices o tristes; son espejos que muestran las distintas facetas de la lucha interna y la fragilidad humana.
+  </p>
+  <p>
+    El primer camino representa la entrega total a la oscuridad. No es solo la derrota ante los demonios internos, sino la aceptación de la sombra como parte inseparable de uno mismo. Aquí, el protagonista cede al peso abrumador de la desesperanza y la tristeza, dejándose consumir poco a poco por la noche eterna que habita en su mente. Este final no busca castigar, sino hacer visible el dolor real que sienten muchas personas, un recordatorio de que la oscuridad puede parecer insuperable.
+  </p>
+  <p>
+    El segundo camino ofrece un respiro momentáneo, una luz débil pero brillante en la tormenta. Es la esperanza, frágil y precaria, que surge de la voluntad de seguir adelante a pesar de todo. Sin embargo, esta esperanza es solo un interludio, un parpadeo que eventualmente puede desvanecerse si no se cuida con valentía y esfuerzo constante. Este final simboliza que aunque se pueda vislumbrar la salida, el camino hacia la sanación es largo, incierto y lleno de recaídas.
+  </p>
+  <p>
+    Ambos finales comparten un mensaje fundamental: la lucha contra la oscuridad interna es continua y personal. No hay fórmulas mágicas ni soluciones rápidas, solo un camino donde cada pequeño paso importa. En la vida real, como en el juego, caer no significa fracasar, y levantarse no siempre es fácil ni garantizado.
+  </p>
+  <p>
+    Esta dualidad de finales invita a reflexionar sobre cómo cada uno enfrenta sus propias batallas emocionales. ¿Nos rendimos a la sombra que amenaza con engullirnos o buscamos, con todas nuestras fuerzas, un destello de luz aunque sea efímero? La respuesta no está escrita, sino que se construye a partir de cada experiencia vivida.
+  </p>
+  <p>
+    Te invitamos a explorar ambas rutas, a entender el significado profundo detrás de cada desenlace, y a reconocer que en la vida real, como en “BOTTOMLESS”, no existen finales definitivos, sino capítulos que se entrelazan en la historia de nuestra existencia.
+  </p>
+                </div>`
+        };
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const section = btn.getAttribute('data-section');
+                content.innerHTML = sections[section];
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+
+    </script>
+</body>
+</html>
